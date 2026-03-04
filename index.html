@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ЮТК — Юргинский технологический колледж</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЮТК — Юргинский технологический колледж</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -15,6 +16,7 @@
     <div class="logo">ЮТК</div>
     <div class="menu" id="menu">
         <a href="#about">О колледже</a>
+        <a href="#news">Новости</a>
         <a href="#contacts">Контакты</a>
     </div>
     <div class="burger" id="burger">
@@ -25,32 +27,47 @@
 </nav>
 
 <header>
-    <h1>ЮТК</h1>
-    <p>Юргинский технологический колледж</p>
-    <button class="btn" id="scrollBtn">Подробнее</button>
+    <h1 data-aos="fade-down">ЮТК</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Юргинский технологический колледж</p>
+    <button class="btn" id="scrollBtn" data-aos="zoom-in" data-aos-delay="400">Подробнее</button>
 </header>
 
 <section id="about">
-    <h2>О колледже</h2>
+    <h2 data-aos="fade-right">О колледже</h2>
     <div class="cards">
-        <div class="card">
+        <div class="card" data-aos="flip-left" data-aos-delay="100">
             <h3>Современные технологии</h3>
             <p>Подготовка востребованных специалистов.</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="flip-left" data-aos-delay="300">
             <h3>Практика</h3>
             <p>Производственная практика и реальные проекты.</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="flip-left" data-aos-delay="500">
             <h3>Будущее</h3>
             <p>Содействие трудоустройству выпускников.</p>
         </div>
     </div>
 </section>
 
+<section id="news">
+    <h2 data-aos="fade-right">Новости</h2>
+    <div class="news-container" id="newsContainer">
+        <!-- Новости будут добавляться сюда -->
+    </div>
+    
+    <div class="add-news-form" data-aos="fade-up">
+        <h3>Добавить новость</h3>
+        <input type="text" id="newsTitle" placeholder="Заголовок новости" class="news-input">
+        <textarea id="newsDesc" placeholder="Описание новости" class="news-input"></textarea>
+        <input type="date" id="newsDate" class="news-input">
+        <button class="btn news-btn" onclick="addNews()">Добавить новость</button>
+    </div>
+</section>
+
 <section id="contacts">
-    <h2>Контакты</h2>
-    <p class="contact">
+    <h2 data-aos="fade-right">Контакты</h2>
+    <p class="contact" data-aos="fade-up" data-aos-delay="200">
         📍 г. Юрга<br>
         📞 +7 (000) 000-00-00<br>
         📧 utk@college.ru
@@ -61,6 +78,7 @@
     © 2026 ЮТК — Юргинский технологический колледж
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
